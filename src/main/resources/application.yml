@@ -1,17 +1,18 @@
 server:
-  port: ${PORT:8080}
+  port: ${PORT:8000}
   forward-headers-strategy: framework
 
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://enowbrenda91106:clexis91106@cluster0.fnr4gwb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      uri: mongodb://172.31.26.116:27017/clexis-db
       database: clexis-db
+
   mail:
     host: smtp.gmail.com
     port: 587
-    username: enoweweh@gmail.com
-    password: ooan ryim piqh lmie
+    username: ${MAIL_USERNAME:loukdomvansorel@gmail.com}
+    password: ${MAIL_PASSWORD:xxxxxxxxxxx}
     properties:
       mail:
         smtp:
